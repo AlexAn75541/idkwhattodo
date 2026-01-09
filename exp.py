@@ -1,7 +1,5 @@
-print("hell yeah")
-n = 'True'
-while n == 'True':
-    print("inside loop")
-    if n == 'false':
-        break
-print("done")
+hour = input("Enter hour: ")
+rate = input("Enter rate: ")
+
+print("Pay:", int(hour) * float(rate))
+35
