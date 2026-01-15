@@ -1,3 +1,10 @@
-name = input("Enter your name: ")
-year= int(input("Enter your year of choice: "))
-print(f"{name} is a valiant knight, born in the year {year}. One morning, Mary woke up to an awful racket: a dragon was approaching the village. Only {name} could save the village's residents.")
+x = 23
+
+if x > 2 :
+    print("x is greater than 2")
+elif x == 2:
+    print("x is equal to 2")
+else :
+    print("x is not greater than 2")
+    
+print("This line is always executed")
