@@ -1,7 +1,2 @@
-
-
-def fuck(bitch) :
-    if bitch == 0:
-        print('nigga')
-    
-
+def twoVariables(hour, rate):
+    return hour * rate
