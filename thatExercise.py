@@ -18,9 +18,9 @@ def computepay(hours, rate):
     elif hours <= 40:
          reconfirm = input(f'Are you sure you worked only {hours} hours? (yes/no): ')
          if reconfirm.lower() in ('yes', 'y'):
-            pay = hours * rate
+            pay = hours * rate * (1 - taxRate / 100)
     else:
-        pay = hours * rate
+        pay = hours * rate * (1 - taxRate / 100)
     return pay
 
 
