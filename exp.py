@@ -1,11 +1,6 @@
-
-import random
-numberInput = input("Enter a number (or 'exit' to quit): ")
-number = None
-randomNumber = random.randint(1, 100)
-while True :
-    
-    
-    
-    
-    
+fruit = 'banana'
+index = 0
+while index < len(fruit):
+    letter = fruit[index]
+    print(index, letter)
+    index = index + 1
