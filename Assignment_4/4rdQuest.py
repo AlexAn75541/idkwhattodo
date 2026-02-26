@@ -1,7 +1,7 @@
 def sum_list(numbers):
     total = 0
     for n in numbers:
-        total += n
+        total += n #im scared of ts so much ngl
     return total
 
 my_list = [1, 2, 3, 4, 5]
