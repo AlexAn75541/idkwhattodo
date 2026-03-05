@@ -1,15 +1,13 @@
 # pithon dictionary
-cabinet = dict ()
-cabinet['summer'] = 12
-cabinet['winter'] = 24
-cabinet['spring'] = 6
-cabinet['fall'] = 'yes'
-cabinet['summer'] = cabinet['summer'] + 1 # update the value of summer to 18
-print(cabinet)
-print(cabinet['summer'])
-print(cabinet['winter'])
-print(cabinet['spring'])
-print(cabinet['fall'])
+counts = dict()
+names = ["Alice", "Bob", "Alice", "Charlie", "Bob", "Alice"]
+for name in names:
+    if name not in counts:
+        counts[name] = 1
+    else:
+        # counts[name] = counts[name] + 1
+        counts[name] = counts.get(name, 0) + 1    
+print(counts)
 
 
 # list:
