@@ -1,4 +1,5 @@
-# pithon dictionary
+# python dictionary
+"""
 counts = dict()
 print('Enter something:')
 line = input('')
@@ -15,7 +16,7 @@ for word in words:
         
 
 print('Counts:', counts)
-
+"""
 """
 names = ["Alice", "Bob", "Alice", "Charlie", "Bob", "Alice"]
 for name in names:
@@ -33,3 +34,7 @@ print(counts)
 #cards.append("2 of Hearts")
 #cards.insert(1, "3 of Diamonds") 
 #print(cards)
+
+
+#tuples:
+
