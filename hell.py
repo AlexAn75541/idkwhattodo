@@ -1,10 +1,18 @@
+
+
+
+
 class creditcard:
+    @creditcard1
     def __init__(self, number="", CVV=0, expiry_date=""):
         self.number = number
         self.CVV = CVV
         self.expiry_date = expiry_date
 
+
+
 class User:
+    @User1
     def __init__(self, name):
         self.name = "An"
         self.credit_card = []
