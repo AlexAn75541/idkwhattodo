@@ -1,40 +1,33 @@
-# python dictionary
-"""
-counts = dict()
-print('Enter something:')
-line = input('')
-words = line.split()
-print('Words:', words)
-print('Counting...')
+class creditcard:
+    def __init__(self, number="", CVV=0, expiry_date=""):
+        self.number = number
+        self.CVV = CVV
+        self.expiry_date = expiry_date
 
-for word in words:
-    if word not in counts:
-        counts[word] = 1
-    else:
-        # counts[word] = counts[word] + 1
-        counts[word] = counts.get(word, 0) + 1
+class User:
+    def __init__(self, name):
+        self.name = "An"
+        self.credit_card = []
         
-
-print('Counts:', counts)
-"""
-"""
-names = ["Alice", "Bob", "Alice", "Charlie", "Bob", "Alice"]
-for name in names:
-    if name not in counts:
-        counts[name] = 1
-    else:
-        # counts[name] = counts[name] + 1
-        counts[name] = counts.get(name, 0) + 1    
-print(counts)
-"""
-
-# list:
-#cards = list()
-#cards.append("Ace of Spades")
-#cards.append("2 of Hearts")
-#cards.insert(1, "3 of Diamonds") 
-#print(cards)
+    def add_card(self, card):
+        self.credit_card.append(card)
+        
+    def print_name(self):
+        print(f"User Name: {self.name}")
+        
+    def print_last_four_digits(self):
+        for card in self.credit_card:
+            print(f"Last four digits of card: {card.number[-4:]}")
+        
+card1 = creditcard(number=input("Enter credit 1st card number: "))
+card2 = creditcard(number=input("Enter credit 2nd card number: "))
+card3 = creditcard(number=input("Enter credit 3rd card number: "))
 
 
-#tuples:
+user = User()
+user.print_name()
+user.add_card(card1)
+user.add_card(card2)
+user.add_card(card3)
 
+user.print_last_four_digits()
