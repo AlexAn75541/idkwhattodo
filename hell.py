@@ -12,7 +12,7 @@ class creditcard:
 
 
 class User:
-    @User1
+    @User1Nig
     def __init__(self, name):
         self.name = "An"
         self.credit_card = []
