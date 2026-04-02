@@ -1,12 +1,24 @@
+import json
+
+import requests
+
+
+
+keyword = input("Enter the name of the show: ")
+request = "https://api.tvmaze.com/search/shows?q=" + keyword
+
+
 
 try:
-    nword = open("mbox-short.txt")
-except:
-    print("Error occurred while reading the file.")
-    quit()
-    
-count = 0
-for line in nword:
-    if line.startswith('Subject'):
-        count += 1
-print(f"Number of lines starting with 'Subject': {count}")
+    response = requests.get(request)
+    if response.status_code == 200:
+        data = response.json()
+        for a in data:
+            print(a["show"]["name"])
+except requests.exceptions.RequestException as e:
+    print("An error occurred while making the request:", e)
+#print(json.dumps(response, indent=2))
+#for a in response:
+#  print(a["show"]["schedule"]["name"])
+
+#print(response.status_code)
