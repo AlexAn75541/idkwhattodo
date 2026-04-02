@@ -1,24 +1,15 @@
-import json
-
-import requests
+from flask import Flask, request
 
 
+app = Flask(__name__)
+@app.route('/sum')
+def calculate_sum():
+    args = request.args
+    number1 = float(args.get('number1', 0))
+    number2 = float(args.get('number2', 0))
+    total = number1 + number2
+    return str(total)
 
-keyword = input("Enter the name of the show: ")
-request = "https://api.tvmaze.com/search/shows?q=" + keyword
 
-
-
-try:
-    response = requests.get(request)
-    if response.status_code == 200:
-        data = response.json()
-        for a in data:
-            print(a["show"]["name"])
-except requests.exceptions.RequestException as e:
-    print("An error occurred while making the request:", e)
-#print(json.dumps(response, indent=2))
-#for a in response:
-#  print(a["show"]["schedule"]["name"])
-
-#print(response.status_code)
+        return str(number1 + number2)
+    # nah I hate this
